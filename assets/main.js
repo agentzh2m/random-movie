@@ -21,23 +21,35 @@ $(document).ready(function() {
       main += '&include_video=false&primary_release_data='+$(".select-year")[0].value
       main += '&vote_average.gte=' + $(".select-rating")[0].value
       main += '&with_genres=' + genre_data.filter(x => x.name == $(".select-genre")[0].value)[0].id
-      console.log(genre_data.filter(x => x.name == $(".select-genre")[0].value)[0].id)
       return main
     }
 
-    $("#start-random").click(() => {
-      $.get(parseQuery(), (json) => {
-        const movies = json.results
-        function rand_movie() {
-          return movies[Math.floor((Math.random() * movies.length))]
-        }
-        var selected_movie = rand_movie()
-        var base_url = 'https://image.tmdb.org/t/p/w500/'
-        $("#title span").text(selected_movie.title)
-        $("#rating span").text(selected_movie.vote_average)
-        $("#poster").attr("src", base_url + selected_movie.poster_path)
-      });
-    })
+    var toggle = true
+    if(toggle){
+      $("#start-random").click(() => {
+        toggle = false
+        $.get(parseQuery(), (json) => {
+          const movies = json.results
+          function rand_movie() {
+            return movies[Math.floor((Math.random() * movies.length))]
+          }
+          counter = 0
+          var intId = setInterval(() => {
+            var selected_movie = rand_movie()
+            var base_url = 'https://image.tmdb.org/t/p/w500/'
+            $("#title span").text(selected_movie.title)
+            $("#rating span").text(selected_movie.vote_average)
+            $("#poster").attr("src", base_url + selected_movie.poster_path)
+            if(counter > 10){
+              clearInterval(intId);
+            }
+            counter++
+          }, 200)
+        });
+      })
+    }
+
+
 
 
   })
