@@ -1,43 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link href="/assets/select2-bootstrap">
     <link rel="stylesheet" href="/assets/main.css">
+
     <title>Random Movie</title>
-  </head>
-  <body>
+</head>
+
+<body>
 
     <div class="container">
-          <div class="header clearfix">
+        <div class="header clearfix">
             <nav>
-              <ul class="nav nav-pills pull-right">
-                <li role="presentation" class="active"><a href="#">Home</a></li>
-                <li role="presentation"><a href="#">About</a></li>
-                <li role="presentation"><a href="#">Contact</a></li>
-              </ul>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">About</a></li>
+                    <li role="presentation"><a href="#">Contact</a></li>
+                </ul>
             </nav>
             <h3 class="text-muted">Random Movie</h3>
-          </div>
+        </div>
 
-          <div class="jumbotron">
+
+        <div class="jumbotron">
             <h1>Random your movie!!</h1>
             <p class="lead">Random your favorite movie! by choosing the category here</p>
-          </div>
+            <form class="form-inline">
+              <div class="form-group">
+                  <label for="sel1">Rating more than</label>
+                  <select class="select2-container form-control select-rating" id="sel1"></select>
+              </div>
+                <div class="form-group">
+                    <label for="sel1">Genre</label>
+                    <select class="select2-container form-control select-genre" id="sel1"></select>
+                </div>
+                <button class="btn btn-default">Random!</button>
+            </form>
+        </div>
 
 
-          <footer class="footer">
+        <footer class="footer">
             <p>&copy; 2016 Ham and Karn, Co.</p>
-          </footer>
+        </footer>
 
-        </div> <!-- /container -->
+    </div>
+    <!-- /container -->
 
 
-    <script
-  src="https://code.jquery.com/jquery-2.2.4.min.js"
-  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="/assets/main.js"></script>
 
-  </body>
+
+</body>
+
 </html>
