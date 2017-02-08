@@ -7,6 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <link href="/assets/select2-bootstrap">
     <link rel="stylesheet" href="/assets/main.css">
+    <link rel="icon" href="/images/movieicon.png">
 
     <title>Random Movie</title>
 </head>
@@ -31,25 +32,29 @@
             <p class="lead">Random your favorite movie! by choosing the category here</p>
             <form class="form-inline">
               <div class="form-group">
-                  <label for="sel1">Rating more than</label>
+                  <label for="sel1">Rating more than: </label>
                   <select class="select2-container form-control select-rating" id="sel1"></select>
               </div>
-                <div class="form-group">
-                    <label for="sel2">Genre</label>
-                    <select class="select2-container form-control select-genre" id="sel2"></select>
-                </div>
-                <div class="form-group">
-                    <label for="sel3">Year greater than</label>
-                    <select class="select2-container form-control select-year" id="sel3"></select>
-                </div>
-                <button type="button" id="start-random" class="btn btn-default btn-sm">Random!</button>
+              <div class="form-group">
+                  <label for="sel2">Genre: </label>
+                  <select class="select2-container form-control select-genre" id="sel2"></select>
+              </div>
+              <div class="form-group">
+                  <label for="sel3">Year greater than: </label>
+                  <select class="select2-container form-control select-year" id="sel3"></select>
+              </div>
+              <br><br>
+              <button type="button" id="start-random" class="btn btn-success btn-sm">Random!</button>
             </form>
         </div>
 
-        <h1 id="title"><span></span></h1>
-        <h2 id="rating"><span></span></h2>
-        <img src="" alt="" id="poster">
+        <div align="center">
+          <h1 id="title">Movie: <span></span></h1>
+          <h2 id="rating">Rating: <span></span></h2>
+          <img src="" alt="" id="poster">
+        </div>
 
+        <br><br>
 
         <footer class="footer">
             <p>&copy; 2016 Ham and Karn, Co.</p>
