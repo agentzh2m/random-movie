@@ -18,8 +18,8 @@
         <div class="header clearfix">
             <nav>
                 <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="#">Home</a></li>
-                    <li role="presentation"><a href="#">About</a></li>
+                    <li role="presentation" class="active"><a href="index.html">Home</a></li>
+                    <li role="presentation"><a href="about.html">About</a></li>
                     <li role="presentation"><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -27,32 +27,35 @@
         </div>
 
 
-        <div class="jumbotron">
+        <div class="center-container">
             <h1>Random your movie!!</h1>
             <p class="lead">Random your favorite movie! by choosing the category here</p>
             <form class="form-inline">
-              <div class="form-group">
+              <div class="form-group same-indent">
                   <label for="sel1">Rating more than: </label>
                   <select class="select2-container form-control select-rating" id="sel1"></select>
               </div>
-              <div class="form-group">
+              <div class="form-group same-indent">
                   <label for="sel2">Genre: </label>
                   <select class="select2-container form-control select-genre" id="sel2"></select>
               </div>
-              <div class="form-group">
+              <div class="form-group same-indent">
                   <label for="sel3">Year greater than: </label>
                   <select class="select2-container form-control select-year" id="sel3"></select>
               </div>
               <br><br>
-              <button type="button" id="start-random" class="btn btn-success btn-sm">Random!</button>
+              <button type="button" id="start-random" class="btn-random btn-green btn-sm">Random!</button>
             </form>
         </div>
-
-        <div align="center">
-          <h1 id="title">Movie: <span></span></h1>
-          <h2 id="rating">Rating: <span></span></h2>
-          <img src="" alt="" id="poster">
+        <div class="movie-contain">
+          <div align="center">
+            <h1 id="title">Movie: <span></span></h1>
+            <h2 id="rating">Rating: <span></span></h2>
+            <img src="" alt="" id="poster">
+          </div>
         </div>
+
+
 
         <br><br>
 
