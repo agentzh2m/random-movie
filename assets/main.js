@@ -38,7 +38,7 @@ $(document).ready(function() {
             var selected_movie = rand_movie()
             var base_url = 'https://image.tmdb.org/t/p/w500/'
             $("#title span").text(selected_movie.title)
-            $("#rating span").text(selected_movie.vote_average)
+            $("#rating span").text("Rating: " + selected_movie.vote_average)
             $("#poster").attr("src", base_url + selected_movie.poster_path)
             if(counter > 10){
               clearInterval(intId);
