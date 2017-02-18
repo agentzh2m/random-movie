@@ -7,9 +7,16 @@ body {
     background-attachment: fixed;
 }
 
-/*color-body {
-  background-color: black;
-}*/
+.btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent; /*set the color you want here*/
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent; /*set the color you want here*/
+}
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -126,21 +133,50 @@ body {
     margin-bottom: 50px;
 }
 
+.index-btn{
+  color: #ECECEC;
+  background-color: transparent;
+}
+
+.index-btn:hover{
+  text-decoration: none;
+  color: #fad0c4;
+  background-color: transparent;
+}
+
+.index-header {
+    background: no-repeat center center;
+    background-color: #808080;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 900px;
+    margin-bottom: 50px;
+    color: white;
+}
+
 .intro-header .site-heading,
 .intro-header .post-heading,
-.intro-header .page-heading {
+.intro-header .page-heading,
+.index-header .site-heading,
+.index-header .post-heading,
+.index-header .page-heading {
   padding: 100px 0 50px;
   color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
-  .intro-header .page-heading {
+  .intro-header .page-heading,
+  .index-header .site-heading,
+  .index-header .post-heading,
+  .index-header .page-heading {
     padding: 150px 0;
   }
 }
 .intro-header .site-heading,
-.intro-header .page-heading {
+.intro-header .page-heading,
+.index-header .site-heading,
+.index-header .page-heading {
   text-align: center;
 }
 .intro-header .site-heading h1,
@@ -149,45 +185,47 @@ body {
   font-size: 50px;
   text-shadow: 1px 1px 4px #000;
 }
-.intro-header .site-heading .subheading,
-.intro-header .page-heading .subheading {
+.index-header .intro-header .site-heading .subheading,
+.index-header .intro-header .page-heading .subheading {
   font-size: 24px;
   line-height: 1.1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   margin: 10px 0 0;
   text-shadow: 1px 1px 4px #000;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
-  .intro-header .page-heading h1 {
+  .intro-header .page-heading h1,
+  .index-header .site-heading h1,
+  .index-header .page-heading h1 {
     font-size: 80px;
     text-shadow: 1px 1px 4px #000;
   }
 }
-.intro-header .post-heading h1 {
+.index-header .intro-header .post-heading h1 {
   font-size: 35px;
 }
-.intro-header .post-heading .subheading,
-.intro-header .post-heading .meta {
+.index-header .intro-header .post-heading .subheading,
+.index-header .intro-header .post-heading .meta {
   line-height: 1.1;
   display: block;
 }
-.intro-header .post-heading .subheading {
+.index-header .intro-header .post-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
   margin: 10px 0 30px;
   font-weight: 600;
   text-shadow: 1px 1px 4px #000;
 }
-.intro-header .post-heading .meta {
+.index-header .intro-header .post-heading .meta {
   font-family: 'Lora', 'Times New Roman', serif;
   font-style: italic;
   font-weight: 300;
   font-size: 20px;
 }
-.intro-header .post-heading .meta a {
+.index-header .intro-header .post-heading .meta a {
   color: white;
 }
 @media only screen and (min-width: 768px) {
@@ -197,6 +235,12 @@ body {
   .intro-header .post-heading .subheading {
     font-size: 30px;
   }
+}
+
+
+.subheading{
+  font-size: 20px;
+  color: #ECECEC;
 }
 
 
