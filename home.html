@@ -23,7 +23,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1>About Us</h1>
+                    <h1>Movie Random</h1>
+                    <!-- line between the two -->
+                    <hr class="small">
+                    <span class="subheading">
+                      Bored? Don't know waht to watch?<br>
+                      Random a movie here!
+                    </span>
                 </div>
             </div>
         </div>
@@ -32,10 +38,31 @@
 
   <div class="container">
     <div class="center-container">
-      <p>
-        Hello! We are Ham and Karn Co.<br>
-
-      </p>
+        <h1>Random your movie!!</h1>
+        <p class="lead">Random your favorite movie by choosing the category here.</p>
+        <form class="form-inline">
+          <div class="form-group same-indent">
+              <label for="sel1">Rating more than: </label>
+              <select class="select2-container form-control select-rating" id="sel1"></select>
+          </div>
+          <div class="form-group same-indent">
+              <label for="sel2">Genre: </label>
+              <select class="select2-container form-control select-genre" id="sel2"></select>
+          </div>
+          <div class="form-group same-indent">
+              <label for="sel3">Year greater than: </label>
+              <select class="select2-container form-control select-year" id="sel3" style="width: 70px;"></select>
+          </div>
+          <br><br>
+          <button type="button" id="start-random" class="btn btn-random btn-green">Random!</button>
+        </form>
+    </div>
+    <div class="movie-container">
+      <div align="center">
+        <h1 id="title"><span></span></h1>
+        <h2 id="rating"><span></span></h2>
+        <img src="" alt="" id="poster">
+      </div>
     </div>
     <footer class="footer">
         <p>2016 Ham and Karn, Co.</p>
