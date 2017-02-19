@@ -10,7 +10,7 @@
     <!-- <link href="css/bootstrap.min.css" rel="stylesheet"/> -->
     <link rel="icon" href="/images/movieicon.png">
 
-    <title>Random Movie</title>
+    <title>Random Movie or TV</title>
 </head>
 <body>
   <nav class="navbar-default">
@@ -32,21 +32,28 @@
 
   <div class="container">
     <div class="center-container">
-        <h1>Random your movie now</h1>
+        <h1>Random your movie or TV now</h1>
         <br><br>
         <p class="lead">Choose any genre, rating and year release of your favorite!</p>
         <form class="form-inline">
+          <div class="form-group same-indent">
+            <label for="sel">Platform</label>
+            <select class="form-control" id="sel">
+              <option value="movie">Movie</option>
+              <option value="tv">TV</option>
+            </select>
+          </div>
           <div class="form-group same-indent">
               <label for="sel1">Rating more than: </label>
               <select class="select2-container form-control select-rating" id="sel1"></select>
           </div>
           <div class="form-group same-indent">
               <label for="sel2">Genre: </label>
-              <select class="select2-container form-control select-genre" id="sel2"></select>
+              <select class="select2-container form-control select-genre" id="sel2" multiple="multiple"></select>
           </div>
           <div class="form-group same-indent">
-              <label for="sel3">Year greater than: </label>
-              <select class="select2-container form-control select-year" id="sel3" style="width: 70px;"></select>
+              <label for="sel-year">Year greater than: </label>
+              <input type="text" class="form-control" id="select-year" placeholder="ex.1995" aria-describedby="sel-year">
           </div>
           <br><br>
           <button type="button" id="start-random" class="btn btn-random btn-green">Random!</button>

@@ -133,6 +133,14 @@ body {
     margin-bottom: 50px;
 }
 
+.selection {
+  color: black;
+}
+
+.select2-results{
+  color: black;
+}
+
 .index-btn{
   color: #ECECEC;
   background-color: transparent;
