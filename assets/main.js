@@ -19,7 +19,8 @@ $(document).ready(function() {
 
     function init(genre_url, genre) {
         $.get(genre_url, (json) => {
-            const genre_data = json.genres
+            var genre_data = json.genres
+            $(".select-genre").empty()
             $(".select-genre").select2({
                 data: genre_data.map(x => x.name)
             });
@@ -79,7 +80,7 @@ $(document).ready(function() {
                                 toggle = true
                             }
                             counter++
-                        }, 200)
+                        }, 400)
                     })
 
                 } else {
